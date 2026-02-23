@@ -1,0 +1,6 @@
+{
+  "trailingSlash": false,
+  "env": {
+    "NODE_OPTIONS": "--no-deprecation"
+  }
+}

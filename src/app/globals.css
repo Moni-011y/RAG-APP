@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --color-background: #ffffff;
+    --color-foreground: #000000;
+
+    --color-primary: #6366f1;
+    --color-primary-foreground: #ffffff;
+    --color-secondary: #8b5cf6;
+
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-3xl: 2.5rem;
+    --radius-4xl: 3rem;
+}
+
+@layer base {
+    body {
+        background: url('/bg-gradient-4k.png') center/cover no-repeat;
+        background-attachment: fixed;
+        color: #0f172a;
+        font-family: 'Poppins', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 100dvh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+}
+
+@layer components {
+    .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar-icon-wrap {
+        @apply w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl flex items-center justify-center transition-all duration-300;
+    }
+
+    .sidebar-icon-wrap.active {
+        background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+        color: white;
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+    }
+
+    .sidebar-icon-wrap.inactive {
+        @apply text-gray-400 hover:text-gray-900 hover:bg-white/50;
+    }
+
+    .primary-pill {
+        background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+        @apply py-3 px-6 md:py-4 md:px-8 rounded-full text-white font-bold text-xs md:text-sm shadow-xl shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all;
+    }
+
+    .chat-bubble-user {
+        background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #38bdf8 100%);
+        @apply text-white rounded-xl md:rounded-2xl rounded-tr-none px-3 py-2 md:px-4 md:py-2.5 shadow-lg shadow-indigo-500/10 font-normal;
+    }
+
+    .chat-bubble-ai {
+        @apply bg-white border border-white/50 text-gray-800 rounded-xl md:rounded-2xl rounded-tl-none px-3 py-2 md:px-4 md:py-2.5 shadow-sm font-normal;
+    }
+
+    .no-input-border {
+        @apply border-none outline-none focus:ring-0 shadow-none bg-transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 0px;
+    }
+}

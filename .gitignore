@@ -1,0 +1,31 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+api/.env
+
+# Dependencies
+node_modules/
+.next/
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# App Specific
+api/faiss_index*/
+faiss_index*/
+api/uploads/
+uploads/
+*.log
+api/*.log
+
+# Vercel
+.vercel
+.vercelignore
+
+/src/generated/prisma
