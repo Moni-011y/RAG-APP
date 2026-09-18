@@ -15,7 +15,7 @@ Lumina is built using modern, high-performance technologies across the entire st
 - **3D Graphics**: [Three.js](https://threejs.org/) (for interactive 3D mascot).
 - **AI Orchestration**: [LangChain.js](https://js.langchain.com/).
 - **Vector Storage**: In-memory optimized storage for Serverless environments.
-- **LLMs**: [Llama-3.3-70b](https://meta.ai/) (via [Groq](https://groq.com/)) and [Gemini](https://deepmind.google/technologies/gemini/) (for high-fidelity embeddings).
+- **LLMs**: [gpt-oss-20b](https://openai.ai/) (via [Groq](https://groq.com/)) and [Gemini](https://deepmind.google/technologies/gemini/) (for high-fidelity embeddings).
 
 ## 🏗️ System Architecture & Workflow
 
